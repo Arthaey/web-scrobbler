@@ -31,10 +31,9 @@
 	/**
 	 * Set up Mutation observing as a default state change detection
 	 */
-	if (Connector.playerSelector !== null) {
+  var observeTarget = null;
+	if ((observeTarget = Connector.getPlayer()) !== null) {
 		console.log('Web Scrobbler: Setting up observer');
-
-		var observeTarget = document.querySelector(Connector.playerSelector);
 
 		if (observeTarget !== null) {
 			var observer = new window.MutationObserver(function () {

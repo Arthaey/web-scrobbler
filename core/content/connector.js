@@ -90,6 +90,19 @@ var BaseConnector = window.BaseConnector || function () {
 		this.trackArtImageSelector = null;
 
 		/**
+		 * Default implementation of player lookup by selector
+		 *
+		 * Override this method for more complex behaviour
+		 *
+		 * @returns {element|null}
+		 */
+		this.getPlayer = function () {
+      if (!this.playerSelector) return null;
+      var observeTarget = document.querySelector(this.playerSelector);
+			return observeTarget || null;
+		};
+
+		/**
 		 * Default implementation of artist name lookup by selector
 		 *
 		 * Override this method for more complex behaviour

@@ -564,7 +564,15 @@ define(function() {
 			matches: ['*://*tradiio.com/*'],
 			js: ['connectors/v2/tradiio.js'],
 			version: 2
-		}
+		},
+
+		{
+			label: 'lyricstraining',
+			matches: ['*://lyricstraining.com/*'],
+			js: ['connectors/v2/lyricstraining.js'],
+			allFrames: true,
+			version: 2
+		},
 
 	];
 });
